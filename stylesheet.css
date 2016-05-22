@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-	background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/background-wallpapers-7.jpg");
+    background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/background-wallpapers-7.jpg");
+    background-size: cover;
 }
 
 .overlay {
