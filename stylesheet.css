@@ -4,6 +4,15 @@ body {
     background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/background-wallpapers-7.jpg");
     background-size: cover;
 }
+table{
+	table-layout:fixed;
+}
+.mainTimetable1{
+	background-color:#FFF;
+}
+.mainTimetable2{
+	background-color: #e6e6e6;
+}
 
 .overlay {
     height: 0%;
@@ -55,6 +64,35 @@ body {
     text-align: center;
     margin-top: 30px;
 }
+.modulesToClear{
+	background-color: #333333;
+	color:#FFF;
+	cursor: pointer;
+}
+.modsTableHeader{
+	background-color: #333333;
+	color:#FFF;
+	cursor: pointer;
+}
+.mods{
+	display:none;
+}
+.current{
+	background-color:#000000;
+}
+.dropzone{
+	
+}
+.dragObject{
+	background-color: #29e;
+	border-color: #fff;
+	border-style: solid;
+	display: inline-block;
+	width: 40px;
+	color: #fff;
+	border: solid 2px #fff;
+	cursor:move
+}
 
 nav {
   background-color: #333333;
@@ -67,6 +105,16 @@ nav li {
   margin: 10px;
   padding: 20px;
   cursor: pointer; 
+}
+footer{
+	background-color: #333333;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align:left; 
+	color:white
 }
 
 @media screen and (max-height: 450px) {
