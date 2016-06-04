@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NUS 4 Year Planner</title>
+	<title>Smart Scheduler</title>
 	<link rel="stylesheet" href="stylesheet.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
 </head>
 <body>
-
 	<nav>
 		<ul>
 			<li><span onclick="openNav1()"><b>Select Your Course</b></span></li>
@@ -177,119 +176,227 @@
 	</div>
 	
 	<div class="col-sm-9">
-		<table border=3 height="900px" width="100%">
-			<tr style="background-color: white">
-				<td><h1 style="text-align:center">To Put Timetable</h1></td>
+		<table border=3 height="900px" width="100%" >
+			<tr class="mainTimetable1">
+				<th colspan="2">&nbsp;</th>
+				<th style="text-align:center">1</th>
+				<th style="text-align:center">2</th>
+				<th style="text-align:center">3</th>
+				<th style="text-align:center">4</th>
+				<th style="text-align:center">5</th>
+				<th style="text-align:center">6</th>
+			</tr>
+			<tr class="mainTimetable2">
+				<th rowspan="2" style="text-align:center;background-color: white">Year 1</th>
+				<th style="text-align:center">Semester 1</th>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="Y1S12" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable1">
+				<th style="text-align:center">Semester 2</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable2">
+				<th rowspan="2" style="text-align:center;background-color: white">Year 2</th>
+				<th style="text-align:center">Semester 1</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable1">
+				<th style="text-align:center">Semester 2</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable2">
+				<th rowspan="2" style="text-align:center;background-color: white">Year 3</th>
+				<th style="text-align:center">Semester 1</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable1">
+				<th style="text-align:center">Semester 2</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable2">
+				<th rowspan="2" style="text-align:center;background-color: white">Year 4</th>
+				<th style="text-align:center">Semester 1</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="mainTimetable1">
+				<th style="text-align:center">Semester 2</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 		</table>
 	</div>
 	
 	<div class="col-sm-3">
-		<table border=3 height="900px" width="100%">
-			<tr style="background-color: white">
-				<td><h1 style="text-align: center">To Put a Drop-down Table of Mods</h1></td>
+		<table border=3  width="100%">
+			<tr class="modsTableHeader">
+				<td>
+				<h1 style="text-align: center">Modules to Clear</h1>
+				</td>
 			</tr>
-			<tr style="background-color: white">
-				<td row span=2><h1 style="text-align: center">Cores</h1></td>
+			<tr id="cores" class="modulesToClear">
+				<td>
+				<h1 style="text-align: center">Cores</h1>
+				<div class="mods"><div id="yes-drop" class="dragObject" draggable="true" ondragstart="drag(event)"> Mod </div></div>
+				</td>
+			</tr >
+			<tr id="electives" class="modulesToClear">
+				<td>
+				<h1 style="text-align: center">Electives</h1>
+				<div class="mods">To put draggable thingy</div>
+				</td>
 			</tr>
-			<tr style="background-color: white">
-				<td row span=2><h1 style="text-align: center">Electives</h1></td>
+			<tr id="unrestricted" class="modulesToClear">
+				<td>
+				<h1 style="text-align: center">Unrestricted Electives</h1>
+				<div class="mods">To put draggable thingy</div>
+				</td>
 			</tr>
-			<tr style="background-color: white">
-				<td row span=2><h1 style="text-align: center">Unrestricted Electives</h1></td>
-			</tr>
-			<tr style="background-color: white">
-				<td row span=2><h1 style="text-align: center">GEMs</h1></td>
+			<tr id="GEMs" class="modulesToClear">
+				<td>
+				<h1 style="text-align: center">GEMs</h1>
+				<div class="mods">To put draggable thingy</div>
+				</td>
 			</tr>
 		</table>
 	</div>
-	<br/>
-	<footer>	<!--To put a better footer-->
-		<div class="container" style="text-align:left; color:white">
-			Smart Scheduler 2016&copy
-		<div>
+
+	<footer>	
+		Smart Scheduler 2016&copy
 	</footer>
 
-<script>
-function openNav1() {
-    document.getElementById("faculties").style.height = "100%";
-}
-function closeNav1() {
-    document.getElementById("faculties").style.height = "0%";
-}
-function openNav2() {
-    document.getElementById("fass").style.height = "100%";
-}
-function closeNav2() {
-    document.getElementById("fass").style.height = "0%";
-}
-function openNav3() {
-    document.getElementById("ba").style.height = "100%";
-}
-function closeNav3() {
-    document.getElementById("ba").style.height = "0%";
-}
-function openNav4() {
-    document.getElementById("soc").style.height = "100%";
-}
-function closeNav4() {
-    document.getElementById("soc").style.height = "0%";
-}
-function openNav5() {
-    document.getElementById("dentistry").style.height = "100%";
-}
-function closeNav5() {
-    document.getElementById("dentistry").style.height = "0%";
-}
-function openNav6() {
-    document.getElementById("sde").style.height = "100%";
-}
-function closeNav6() {
-    document.getElementById("sde").style.height = "0%";
-}
-function openNav7() {
-    document.getElementById("engineering").style.height = "100%";
-}
-function closeNav7() {
-    document.getElementById("engineering").style.height = "0%";
-}
-function openNav8() {
-    document.getElementById("law").style.height = "100%";
-}
-function closeNav8() {
-    document.getElementById("law").style.height = "0%";
-}
-function openNav9() {
-    document.getElementById("med").style.height = "100%";
-}
-function closeNav9() {
-    document.getElementById("med").style.height = "0%";
-}
-function openNav10() {
-    document.getElementById("nursing").style.height = "100%";
-}
-function closeNav10() {
-    document.getElementById("nursing").style.height = "0%";
-}
-function openNav11() {
-    document.getElementById("music").style.height = "100%";
-}
-function closeNav11() {
-    document.getElementById("music").style.height = "0%";
-}
-function openNav12() {
-    document.getElementById("science").style.height = "100%";
-}
-function closeNav12() {
-    document.getElementById("science").style.height = "0%";
-}
-function openNav13() {
-    document.getElementById("pharmacy").style.height = "100%";
-}
-function closeNav13() {
-    document.getElementById("pharmacy").style.height = "0%";
-}
-</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="javaScript.js"></script>
+	<script>
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
 
+	function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+	function openNav1() {
+		document.getElementById("faculties").style.height = "100%";
+	}
+	function closeNav1() {
+		document.getElementById("faculties").style.height = "0%";
+	}
+	function openNav2() {
+		document.getElementById("fass").style.height = "100%";
+	}
+	function closeNav2() {
+		document.getElementById("fass").style.height = "0%";
+	}
+	function openNav3() {
+		document.getElementById("ba").style.height = "100%";
+	}
+	function closeNav3() {
+		document.getElementById("ba").style.height = "0%";
+	}
+	function openNav4() {
+		document.getElementById("soc").style.height = "100%";
+	}
+	function closeNav4() {
+		document.getElementById("soc").style.height = "0%";
+	}
+	function openNav5() {
+		document.getElementById("dentistry").style.height = "100%";
+	}
+	function closeNav5() {
+		document.getElementById("dentistry").style.height = "0%";
+	}
+	function openNav6() {
+		document.getElementById("sde").style.height = "100%";
+	}
+	function closeNav6() {
+		document.getElementById("sde").style.height = "0%";
+	}
+	function openNav7() {
+		document.getElementById("engineering").style.height = "100%";
+	}
+	function closeNav7() {
+		document.getElementById("engineering").style.height = "0%";
+	}
+	function openNav8() {
+		document.getElementById("law").style.height = "100%";
+	}
+	function closeNav8() {
+		document.getElementById("law").style.height = "0%";
+	}
+	function openNav9() {
+		document.getElementById("med").style.height = "100%";
+	}
+	function closeNav9() {
+		document.getElementById("med").style.height = "0%";
+	}
+	function openNav10() {
+		document.getElementById("nursing").style.height = "100%";
+	}
+	function closeNav10() {
+		document.getElementById("nursing").style.height = "0%";
+	}
+	function openNav11() {
+		document.getElementById("music").style.height = "100%";
+	}
+	function closeNav11() {
+		document.getElementById("music").style.height = "0%";
+	}
+	function openNav12() {
+		document.getElementById("science").style.height = "100%";
+	}
+	function closeNav12() {
+		document.getElementById("science").style.height = "0%";
+	}
+	function openNav13() {
+		document.getElementById("pharmacy").style.height = "100%";
+	}
+	function closeNav13() {
+		document.getElementById("pharmacy").style.height = "0%";
+	}
+	</script>
 </body>
 </html>
