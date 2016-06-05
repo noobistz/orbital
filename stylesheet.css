@@ -14,6 +14,69 @@ table{
 	background-color: #e6e6e6;
 }
 
+.selectCourse1{
+	position: relative;
+	font-size:30px;
+	color: #818181;
+	cursor:pointer;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.modulesToClear{
+	background-color: #333333;
+	color:#FFF;
+	cursor: pointer;
+}
+.modsTableHeader{
+	background-color: #333333;
+	color:#FFF;
+	cursor: pointer;
+}
+.mods{
+	display:none;
+	text-align:center;
+}
+.current{
+	background-color:#000000;
+}
+
+.dragObject{
+	background-color: #33cc33;
+	border-style: solid;
+	float:left;
+	width: 80px;
+	padding: 20px;
+	margin:10px;
+	color: #fff;
+	border: solid 2px #FFF;
+	cursor:move;
+}
+
+nav {
+  background-color: #333333;
+}
+
+nav li {
+  display: inline;
+  color: #FFF;
+  font-size: 20px;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer; 
+}
+footer{
+	background-color: #333333;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align:left; 
+	color:white
+}
+
 .overlay {
     height: 0%;
     width: 100%;
@@ -52,69 +115,6 @@ table{
     top: 20px;
     right: 45px;
     font-size: 60px !important;
-}
-
-.selectCourse1{
-	position: relative;
-	font-size:30px;
-	color: #818181;
-	cursor:pointer;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-.modulesToClear{
-	background-color: #333333;
-	color:#FFF;
-	cursor: pointer;
-}
-.modsTableHeader{
-	background-color: #333333;
-	color:#FFF;
-	cursor: pointer;
-}
-.mods{
-	display:none;
-}
-.current{
-	background-color:#000000;
-}
-.dropzone{
-
-}
-.dragObject{
-	background-color: #29e;
-	border-color: #fff;
-	border-style: solid;
-	display: inline-block;
-	width: 40px;
-	color: #fff;
-	border: solid 2px #fff;
-	cursor:move
-}
-
-nav {
-  background-color: #333333;
-}
-
-nav li {
-  display: inline;
-  color: #FFF;
-  font-size: 20px;
-  margin: 10px;
-  padding: 20px;
-  cursor: pointer;
-}
-footer{
-	background-color: #333333;
-	position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 20px;
-    width: 100%;
-    text-align:left;
-	color:white
 }
 
 @media screen and (max-height: 450px) {

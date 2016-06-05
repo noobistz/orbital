@@ -3,7 +3,7 @@
 <head>
 	<title>Smart Scheduler</title>
 	<link rel="stylesheet" href="stylesheet.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
 </head>
 <body>
 	<nav>
@@ -56,7 +56,7 @@
 		<div id="soc" class="overlay">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">x</a>
 		  <section class="overlay-content">
-			<a href="#">Business Analytics</a>
+			<a href="#"><span id="BAC">Business Analytics</span></a>
 			<a href="#">Computer Science Courses</a>
 			<a href="#">Information Security</a>
 			<a href="#">Information System</a>
@@ -174,7 +174,7 @@
 		</div>
 	  </section>
 	</div>
-
+	
 	<div class="col-sm-9">
 		<table border=3 height="900px" width="100%" >
 			<tr class="mainTimetable1">
@@ -189,8 +189,8 @@
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 1</th>
 				<th style="text-align:center">Semester 1</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-				<td id="Y1S12" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -264,7 +264,7 @@
 			</tr>
 		</table>
 	</div>
-
+	
 	<div class="col-sm-3">
 		<table border=3  width="100%">
 			<tr class="modsTableHeader">
@@ -272,16 +272,14 @@
 				<h1 style="text-align: center">Modules to Clear</h1>
 				</td>
 			</tr>
-			<tr id="cores" class="modulesToClear">
+			<tr class="modulesToClear">
 				<td>
 				<h1 style="text-align: center">Cores</h1>
-				<div class="mods">
-					<div id="yes-drop" class="dragObject" draggable="true" ondragstart="drag(event)"> Mod </div>
-				</div>
+				<div class="mods"><span id="cores" class="dragObject" draggable="true" ondragstart="drag(event)"> Mod </span></div>
 				</td>
 			</tr >
-			<tr id="electives" class="modulesToClear">
-				<td>
+			<tr class="modulesToClear">
+				<td id="electives">
 				<h1 style="text-align: center">Electives</h1>
 				<div class="mods">To put draggable thingy</div>
 				</td>
@@ -301,104 +299,9 @@
 		</table>
 	</div>
 
-	<footer>
-		Smart Scheduler 2016&copy
-	</footer>
+	<footer>Smart Scheduler 2016&copy</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="javaScript.js"></script>
-	<script>
-	function allowDrop(ev) {
-		ev.preventDefault();
-	}
-
-	function drag(ev) {
-		ev.dataTransfer.setData("text", ev.target.id);
-	}
-
-	function drop(ev) {
-		ev.preventDefault();
-		var data = ev.dataTransfer.getData("text");
-		ev.target.appendChild(document.getElementById(data));
-	}
-	function openNav1() {
-		document.getElementById("faculties").style.height = "100%";
-	}
-	function closeNav1() {
-		document.getElementById("faculties").style.height = "0%";
-	}
-	function openNav2() {
-		document.getElementById("fass").style.height = "100%";
-	}
-	function closeNav2() {
-		document.getElementById("fass").style.height = "0%";
-	}
-	function openNav3() {
-		document.getElementById("ba").style.height = "100%";
-	}
-	function closeNav3() {
-		document.getElementById("ba").style.height = "0%";
-	}
-	function openNav4() {
-		document.getElementById("soc").style.height = "100%";
-	}
-	function closeNav4() {
-		document.getElementById("soc").style.height = "0%";
-	}
-	function openNav5() {
-		document.getElementById("dentistry").style.height = "100%";
-	}
-	function closeNav5() {
-		document.getElementById("dentistry").style.height = "0%";
-	}
-	function openNav6() {
-		document.getElementById("sde").style.height = "100%";
-	}
-	function closeNav6() {
-		document.getElementById("sde").style.height = "0%";
-	}
-	function openNav7() {
-		document.getElementById("engineering").style.height = "100%";
-	}
-	function closeNav7() {
-		document.getElementById("engineering").style.height = "0%";
-	}
-	function openNav8() {
-		document.getElementById("law").style.height = "100%";
-	}
-	function closeNav8() {
-		document.getElementById("law").style.height = "0%";
-	}
-	function openNav9() {
-		document.getElementById("med").style.height = "100%";
-	}
-	function closeNav9() {
-		document.getElementById("med").style.height = "0%";
-	}
-	function openNav10() {
-		document.getElementById("nursing").style.height = "100%";
-	}
-	function closeNav10() {
-		document.getElementById("nursing").style.height = "0%";
-	}
-	function openNav11() {
-		document.getElementById("music").style.height = "100%";
-	}
-	function closeNav11() {
-		document.getElementById("music").style.height = "0%";
-	}
-	function openNav12() {
-		document.getElementById("science").style.height = "100%";
-	}
-	function closeNav12() {
-		document.getElementById("science").style.height = "0%";
-	}
-	function openNav13() {
-		document.getElementById("pharmacy").style.height = "100%";
-	}
-	function closeNav13() {
-		document.getElementById("pharmacy").style.height = "0%";
-	}
-	</script>
 </body>
 </html>
