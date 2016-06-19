@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2016 at 04:09 PM
+-- Generation Time: Jun 19, 2016 at 07:45 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -99,8 +99,10 @@ INSERT INTO `modules` (`code`, `title`, `credit`, `prerequisite`, `preclusion`, 
 ('CS1010J', 'Programming Methodology', 4, NULL, 'CS1010 and its equivalents', NULL, '1'),
 ('CS1010S', 'Programming Methodology', 4, NULL, 'CG1101, CS1010, CS1010E, CS1010FC, CS1101, CS1101C, CS1101S', NULL, '1, 2'),
 ('CS1020', 'Data Structures and Algorithms I', 4, 'CS1010 Programming Methodology', 'CG1102, CG1103, CS1020E, CS1102, CS1102C, CS1102S, CS2020', NULL, '1, 2'),
+('CS1101S', 'Programming Methodology', 5, 'No programming or computer science experience is required. A-level Mathematics or H2 Mathematics MA1301 or MA1301FC or MA1301X', 'CG1101, CS1010, CS1010E, CS1010FC, CS1010S, CS1010X, CS1101, CS1101C, Engineering students', NULL, '1'),
 ('CS1231', 'Discrete Structures', 4, 'A-level Mathematics or H2 Mathematics or MA1301 or MA1301FC or MA1301X', 'MA1100', NULL, '1, 2'),
 ('CS2010', 'Data Structures and Algorithms II', 4, 'CS1020 or CS1020E or CG1103 Data Structures and Algorithms I', 'CG1102, CS1102, CS1102C, CS1102S, CS2020', NULL, '1, 2'),
+('CS2020', 'Data Structures and Algorithms Accelerated', 6, 'Obtain a grade of at least A- in either CS1010 or CS1101S or CS1010S or CS1010FC or their equivalents', 'CG1102, CG1103, CS1020, CS1020E, CS2010, CS1102, CS1102C, CS1102S', 'Obtain a grade of at least A- in either CS1010 or CS1101S Programming Methodology', '2'),
 ('CS2100', 'Computer Organisation', 4, 'CS1010 or its equivalent', 'CS1104 or Students from Department of ECE', NULL, '1, 2'),
 ('CS2101', 'Effective Communication for Computing Professionals', 4, 'Students have to complete ES1000 and/or ES1102 (if required to take the module/s) before reading this module.', 'CS2103 Software Engineering, IS2101 Business Technical Communication or its equivalent, ES2002, ES2007S, ES2007D, CG1413, EG1413 and ES1601.', 'Students have to read CS2103T Software Engineering at the same time as this module.', '1, 2'),
 ('CS2102', 'Database Systems', 4, '(CS1020 or its equivalent) and (CS1231 or MA1100)', 'CS2102S, IT2002', NULL, '1, 2'),
@@ -114,6 +116,7 @@ INSERT INTO `modules` (`code`, `title`, `credit`, `prerequisite`, `preclusion`, 
 ('CS3103', 'Computer Networks Practice', 4, 'CS2105 Introduction to Computer Networks or EE3204/E Computer Communication Networks I', 'EE4210 Computer Communication Networks II', NULL, '1'),
 ('CS3201', 'Software Engineering Project I', 4, 'CS2103 Software Engineering or its equivalent.', 'CS3215', 'CS3202 Software Engineering Project II', '1, 2'),
 ('CS3202', 'Software Engineering Project II', 4, 'CS2103 Software Engineering or its equivalent.', 'CS3215 Software Engineering Project', 'CS3201 Software Engineering Project I', '1, 2'),
+('CS3205', 'Information Security Capstone Project', 8, NULL, NULL, NULL, ''),
 ('CS3210', 'Parallel Computing', 4, 'CS2100 Computer Organisation or CG2007 Microprocessor Systems or EE2024 Programming for Computer Interfaces', NULL, NULL, '1'),
 ('CS3211', 'Parallel and Concurrent Programming', 4, 'CS2106 or CG2271', NULL, NULL, '2'),
 ('CS3213', 'Software Systems Design', 4, NULL, NULL, NULL, ''),
