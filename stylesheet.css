@@ -64,7 +64,7 @@ nav li {
   font-size: 20px;
   margin: 10px;
   padding: 20px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 footer{
 	background-color: #333333;
@@ -73,7 +73,7 @@ footer{
     bottom: 0;
     height: 20px;
     width: 100%;
-    text-align:left; 
+    text-align:left;
 	color:white
 }
 

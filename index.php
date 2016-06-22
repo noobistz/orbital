@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+<?php
+	session_start();
+	include_once("db.php");
+?>
+
 <html>
 <head>
 	<title>Smart Scheduler</title>
 	<link rel="stylesheet" href="stylesheet.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
 	<nav>
@@ -56,11 +60,26 @@
 		<div id="soc" class="overlay">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">x</a>
 		  <section class="overlay-content">
-			<a href="#"><span id="BAC">Business Analytics</span></a>
+				<?php
+					$sql_all_soc = "SELECT * FROM courses WHERE (id='1' or id='2' or id='3' or id='4' or id='5') ORDER BY id ASC";
+					$res = mysqli_query($db, $sql_all_soc) or die(mysql_error());
+
+					$courses = "";
+
+					if(mysqli_num_rows($res) > 0) {
+						while($row = mysqli_fetch_assoc($res)) {
+							$id = $row['id'];
+							$name = $row['name'];
+							$courses .= "<div><a href='view_mods.php?pid=$id'>$name</a></div>";
+						}
+						echo $courses;
+					}
+				?>
+			<!--<a href="#"><span id="BAC">Business Analytics</span></a>
 			<a href="#">Computer Science Courses</a>
 			<a href="#">Information Security</a>
 			<a href="#">Information System</a>
-			<a href="#">Computer Engineering</a>
+			<a href="#">Computer Engineering</a>-->
 		  </section>
 		</div>
 		<br />
@@ -174,7 +193,7 @@
 		</div>
 	  </section>
 	</div>
-	
+
 	<div class="col-sm-9">
 		<table border=3 height="900px" width="100%" >
 			<tr class="mainTimetable1">
@@ -264,7 +283,7 @@
 			</tr>
 		</table>
 	</div>
-	
+
 	<div class="col-sm-3">
 		<table border=3  width="100%">
 			<tr class="modsTableHeader">
