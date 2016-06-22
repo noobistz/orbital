@@ -75,11 +75,6 @@
 						echo $courses;
 					}
 				?>
-			<!--<a href="#"><span id="BAC">Business Analytics</span></a>
-			<a href="#">Computer Science Courses</a>
-			<a href="#">Information Security</a>
-			<a href="#">Information System</a>
-			<a href="#">Computer Engineering</a>-->
 		  </section>
 		</div>
 		<br />

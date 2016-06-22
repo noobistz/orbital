@@ -212,76 +212,76 @@
 				<th style="text-align:center">Semester 1</th>
 				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 2</th>
 				<th style="text-align:center">Semester 1</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 3</th>
 				<th style="text-align:center">Semester 1</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 4</th>
 				<th style="text-align:center">Semester 1</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 		</table>
 	</div>
@@ -297,15 +297,30 @@
 				<td>
 				<h1 style="text-align: center">Cores</h1>
 				<?php
-					switch ($pid) {
-						case 1:
+					if ($pid == 1) {
 							$sql_mods = "SELECT *
 													 FROM modules
-													 WHERE (code='ACC1002X' or code='BT1101' or code='CS1010S' or code='CS1020' or code='EC1301' or code='IS1103' or code='IS1105' or code='MA1311' or code='MA1101R' or code='MA1521' or code='MA1102R' or code='MKT1003X' or code='BT2101' or code='BT2102' or code='CS2010'
-														      or code='ES2660' or code='IE2110' or code='DSC3214' or code='IS2101' or code='ST2334' or code='BT3101' or code='BT3102' or code='BT3103' or code='ST3131')";
-							$res = mysqli_query($db, $sql_mods) or die(mysql_error());
+													 WHERE course='BZA' and type='C'";
+					} else if ($pid == 2) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE course='CEG' and type='C'";
+					} else if ($pid == 3) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE course='CS' and type='C'";
+					} else if ($pid == 4) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE course='ISEC' and type='C'";
+					} else if ($pid == 5) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE course='ISYS' and type='C'";
+					}
+					$res = mysqli_query($db, $sql_mods) or die(mysql_error());
 
-							$mods = "";
+					$mods = "";
 
 							if(mysqli_num_rows($res) > 0) {
 								while($row = mysqli_fetch_assoc($res)) {
@@ -317,11 +332,42 @@
 									$coreq = $row['corequisite'];
 									$sem = $row['semAvailability'];
 
-									$mods .= "<div class='mods'><span id='cores' class='dragObject' draggable='true' ondragstart='drag(event)'>$code</span></div>";
+									if ($prereq != null & $preclu != null & $coreq != null) {
+										$mods .="<div class='mods'>
+																<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: $preclu Co-requisites: $coreq' data-tooltip-position='bottom'>$code</span>
+														  </div>";
+									} else if ($prereq != null & $preclu != null & $coreq === null){
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: $preclu Co-requisites: NIL' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									} else if ($prereq != null & $preclu === null & $coreq != null){
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: NIL Co-requisites: $coreq' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									}	else if ($prereq === null & $preclu != null & $coreq != null){
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: $preclu Co-requisites: $coreq' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									} else if ($prereq === null & $preclu === null & $coreq != null){
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: NIL Co-requisites: $coreq' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									} else if ($prereq === null & $preclu != null & $coreq === null){
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: $preclu Co-requisites: NIL' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									} else if ($prereq != null & $preclu === null & $coreq === null){
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: NIL Co-requisites: NIL' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									} else {
+										$mods .= "<div class='mods'>
+															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: NIL Co-requisites: NIL' data-tooltip-position='bottom'>$code</span>
+													  </div>";
+									}
 								}
 								echo $mods;
 							}
-					}
 
 				?>
 				<div class="mods"><span id="cores" class="dragObject" draggable="true" ondragstart="drag(event)"> Mod </span></div>
