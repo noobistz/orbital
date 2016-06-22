@@ -322,53 +322,52 @@
 
 					$mods = "";
 
-							if(mysqli_num_rows($res) > 0) {
-								while($row = mysqli_fetch_assoc($res)) {
-									$code = $row['code'];
-									$title = $row['title'];
-									$credit = $row['credit'];
-									$prereq = $row['prerequisite'];
-									$preclu = $row['preclusion'];
-									$coreq = $row['corequisite'];
-									$sem = $row['semAvailability'];
+					if(mysqli_num_rows($res) > 0) {
+						while($row = mysqli_fetch_assoc($res)) {
+							$code = $row['code'];
+							$title = $row['title'];
+							$credit = $row['credit'];
+							$prereq = $row['prerequisite'];
+							$preclu = $row['preclusion'];
+							$coreq = $row['corequisite'];
+							$sem = $row['semAvailability'];
 
-									if ($prereq != null & $preclu != null & $coreq != null) {
-										$mods .="<div class='mods'>
-																<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: $preclu Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
-														  </div>";
-									} else if ($prereq != null & $preclu != null & $coreq === null){
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: $preclu Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									} else if ($prereq != null & $preclu === null & $coreq != null){
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: NIL Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									}	else if ($prereq === null & $preclu != null & $coreq != null){
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: $preclu Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									} else if ($prereq === null & $preclu === null & $coreq != null){
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: NIL Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									} else if ($prereq === null & $preclu != null & $coreq === null){
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: $preclu Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									} else if ($prereq != null & $preclu === null & $coreq === null){
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: NIL Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									} else {
-										$mods .= "<div class='mods'>
-															<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: NIL Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
-													  </div>";
-									}
-								}
-								echo $mods;
+							if ($prereq != null & $preclu != null & $coreq != null) {
+								$mods .="<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: $preclu Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
+										 	   </div>";
+							} else if ($prereq != null & $preclu != null & $coreq === null){
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: $preclu Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
+													</div>";
+							} else if ($prereq != null & $preclu === null & $coreq != null){
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: NIL Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
+												  </div>";
+							}	else if ($prereq === null & $preclu != null & $coreq != null){
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: $preclu Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
+												  </div>";
+							} else if ($prereq === null & $preclu === null & $coreq != null){
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: NIL Co-requisites: $coreq Semester: $sem' data-tooltip-position='bottom'>$code</span>
+												  </div>";
+							} else if ($prereq === null & $preclu != null & $coreq === null){
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: $preclu Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
+											  	</div>";
+							} else if ($prereq != null & $preclu === null & $coreq === null){
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: $prereq Preclusion: NIL Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
+											  	</div>";
+							} else {
+								$mods .= "<div class='mods'>
+														<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit Pre-requisites: NIL Preclusion: NIL Co-requisites: NIL Semester: $sem' data-tooltip-position='bottom'>$code</span>
+											  	</div>";
 							}
-
+						}
+								echo $mods;
+					}
 				?>
 				<div class="mods"><span id="cores" class="dragObject" draggable="true" ondragstart="drag(event)"> Mod </span></div>
 				</td>
