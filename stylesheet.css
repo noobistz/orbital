@@ -52,6 +52,7 @@ table{
 	color: #fff;
 	border: solid 2px #cccccc;
 	cursor:move;
+  padding: 20px;
 }
 
 nav {
@@ -143,9 +144,10 @@ footer{
     padding: 4px 8px;
     font-size: 14px;
     line-height: 1.4;
-    min-width: 100px;
+    min-width: 200px;
     text-align: center;
     border-radius: 4px;
+    white-space: pre-wrap;
 }
 /* Dynamic horizontal centering */
 [data-tooltip-position="top"]:before,

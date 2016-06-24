@@ -289,25 +289,25 @@
 			<tr class="modulesToClear">
 				<td>
 				<h1 style="text-align: center">Cores</h1>
-				<div class="mods"><span id="cores" class="dragObject" draggable="true" ondragstart="drag(event)"> Mod </span></div>
+				<div class="mods">Please select a course.</div>
 				</td>
 			</tr >
 			<tr class="modulesToClear">
 				<td id="electives">
 				<h1 style="text-align: center">Electives</h1>
-				<div class="mods">To put draggable thingy</div>
+				<div class="mods">Please select a course.</div>
 				</td>
 			</tr>
 			<tr id="unrestricted" class="modulesToClear">
 				<td>
 				<h1 style="text-align: center">Unrestricted Electives</h1>
-				<div class="mods">To put draggable thingy</div>
+				<div class="mods">Please select a course.</div>
 				</td>
 			</tr>
 			<tr id="GEMs" class="modulesToClear">
 				<td>
 				<h1 style="text-align: center">GEMs</h1>
-				<div class="mods">To put draggable thingy</div>
+				<div class="mods">Please select a course.</div>
 				</td>
 			</tr>
 		</table>
