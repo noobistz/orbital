@@ -54,6 +54,18 @@ table{
 	cursor:move;
   padding: 20px;
 }
+.noDragObject{
+	background-color: #ff0000;
+	border-style: solid;
+	text-align:center;
+	float:left;
+	width: 120px;
+	margin:10px;
+	color: #fff;
+	border: solid 2px #cccccc;
+	cursor:move;
+  padding: 20px;
+}
 
 nav {
   background-color: #333333;

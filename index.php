@@ -203,8 +203,8 @@
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 1</th>
 				<th style="text-align:center">Semester 1</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>

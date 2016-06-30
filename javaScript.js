@@ -135,6 +135,5 @@ var main=function(){
 		closeNav13();
 		closeNav1();
 	});
-
 }
 $(document).ready(main);
