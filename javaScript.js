@@ -1,16 +1,3 @@
-//AJAX
-function loadDoc(url) {
-  var xhttp=new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    //if (xhttp.readyState == 4 && xhttp.status == 200) { // change for db
-      document.getElementById("cores").innerHTML = "changed"; // change this to add modules
-   // }
-  };
-  xhttp.open("GET", url, true);
-  xhttp.send();
-}
-
-
 // select courses part (simplify using ajax eventually)
 function openNav1() {
 	document.getElementById("faculties").style.height = "100%";
@@ -104,6 +91,17 @@ function drop(ev) {
 	ev.preventDefault();
 	var data = ev.dataTransfer.getData("text");
 	ev.target.appendChild(document.getElementById(data));
+	var sendData="data="+data; // pre-processing for sending AJAX data
+	$.post("process.php",sendData,function(response){  // AJAX
+	//alert(response);              // uncomment for debugging
+	// to make the objects draggable
+	var responseArr=response.split(" ");
+	for (i=0;i<responseArr.length;i++){
+		document.getElementById(responseArr[i]).className="DragObject";
+		document.getElementById(responseArr[i]).setAttribute("draggable", "true");
+		document.getElementById(responseArr[i]).setAttribute("ondragstart","drag(event)");
+	}
+});
 }
 
 // main

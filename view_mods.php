@@ -1,8 +1,8 @@
 <?php
 	session_start();
 	include_once("db.php");
-
 	$pid = $_GET['pid'];
+	$PRMods=array("test"=>"0"); // to store mods with pre-requisites
 ?>
 
 <html>
@@ -318,9 +318,11 @@
 													 FROM modules
 													 WHERE course LIKE '%ISYS%' and type='C'";
 					}
+					
 					$res = mysqli_query($db, $sql_mods) or die(mysql_error());
 
 					$mods = "";
+					
 
 					if(mysqli_num_rows($res) > 0) {
 						while($row = mysqli_fetch_assoc($res)) {
@@ -331,7 +333,12 @@
 							$preclu = $row['preclusion'];
 							$coreq = $row['corequisite'];
 							$sem = $row['semAvailability'];
+							
 
+							$prereqArr=explode("and",$prereq);
+							if ($prereq!=null){
+								$PRMods[$code]=$prereqArr;
+							}
 							if ($prereq != null & $preclu != null & $coreq != null) {
 								$mods .="<div class='mods'>
 														<span id='$code' class='noDragObject' data-tooltip='Module Credit: $credit &#xa;Pre-requisites: $prereq &#xa;Preclusion: $preclu &#xa;Co-requisites: $coreq &#xa;Semester: $sem' data-tooltip-position='bottom'>$code</span>
@@ -409,7 +416,13 @@
 							$preclu = $row['preclusion'];
 							$coreq = $row['corequisite'];
 							$sem = $row['semAvailability'];
+							$prereqArr=explode("and",$prereq);
+							if ($prereq!=null){
+								$PRMods[$code]=$prereqArr;
+							}
 
+
+							// output the draggable object class
 							if ($prereq != null & $preclu != null & $coreq != null) {
 								$mods .="<div class='mods'>
 														<span id='$code' class='noDragObject' data-tooltip='Module Credit: $credit &#xa;Pre-requisites: $prereq &#xa;Preclusion: $preclu &#xa;Co-requisites: $coreq &#xa;Semester: $sem' data-tooltip-position='bottom'>$code</span>
@@ -446,6 +459,7 @@
 						}
 								echo $mods;
 					}
+					$_SESSION['PRMods'] = $PRMods; // to pass the $PRMods array to process.php
 				?>
 				</td>
 			</tr>
