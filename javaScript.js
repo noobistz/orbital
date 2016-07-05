@@ -1,4 +1,4 @@
-// select courses part (simplify using ajax eventually)
+// select courses
 function openNav1() {
 	document.getElementById("faculties").style.height = "100%";
 }
@@ -78,6 +78,15 @@ function closeNav13() {
 	document.getElementById("pharmacy").style.height = "0%";
 }
 
+// instructions
+function instructions(){
+	document.getElementById("instruction").style.height = "100%";
+}
+function closeInstruction(){
+	document.getElementById("instruction").style.height = "0%";
+}
+
+
 // drag and drop stuff
 function allowDrop(ev) {
 	ev.preventDefault();
@@ -106,6 +115,7 @@ function drop(ev) {
 
 // main
 var main=function(){
+	
 	$(".modulesToClear").click(function() {
 		$(".modulesToClear").removeClass("current");
 		$(".mods").hide();

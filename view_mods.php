@@ -15,11 +15,72 @@
 	<nav>
 		<ul>
 			<li><span onclick="openNav1()"><b>Select Your Course</b></span></li>
-			<li>Instructions</li><!-- To add, if needed?-->
+			<li><span onclick="instructions()">Instructions</span></li>
 		<ul>
 	</nav>
 	<br/>
+	<!--Instructions carousel-->
+	<div id="instruction" class="overlay">
+		
+		<div id="instructionsCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+			<!--Carousel indicators-->
+			<ol class="carousel-indicators">
+			  <li data-target="#instructionsCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="1"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="2"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="3"></li>
+			</ol>
 
+			<!--Slides-->
+			<div class="carousel-inner" role="listbox">
+			  <div class="item active">
+				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/1.png">
+					<h3>Begin by Selecting Your Course</h3>
+					<p>After selecting your course through the button shown above, your course's modules will be loaded.</p>
+				</div>
+			  </div>
+
+			  <div class="item">
+			  	<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/2.png">
+					<h3>Select any Category on the Right Table to View Your Modules</h3>
+					<p>Modules in green will be draggable and are allowed to be scheduled in the left table.</p>
+				 </div>
+			  </div>
+			
+			  <div class="item">
+				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/3.png">
+					<h3>Modules in Red Are Not Allowed to Be Scheduled</h3>
+					<p>Modules will be red if their pre-requisites have not been met. Thus, they will not be allowed to be scheduled in the left table.</p>
+				 </div>
+			  </div>
+
+			  <div class="item">
+				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/4.png">
+					<h3>Modules in Red Will Turn Green Once Their Pre-Requisites Have Been Met</h3>
+					<p>After scheduling their pre-requisites in the left table, modules with their pre-requisites met will turn green and be allowed to be scheduled in the left table</p>
+				 </div>
+			  </div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#instructionsCarousel" role="button" data-slide="prev">
+			  <span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#instructionsCarousel" role="button" data-slide="next">
+			  <span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		  </div>
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeInstruction()">x</a>
+	</div>
+	
 	<div id="faculties" class="overlay">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">x</a>
 	  <section class="selectCourse1">
@@ -586,6 +647,7 @@
 	<footer>Smart Scheduler 2016&copy</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="javaScript.js"></script>
 </body>
 </html>
