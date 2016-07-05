@@ -101,17 +101,28 @@ function drop(ev) {
 	var data = ev.dataTransfer.getData("text");
 	ev.target.appendChild(document.getElementById(data));
 	var sendData="data="+data; // pre-processing for sending AJAX data
-	$.post("process.php",sendData,function(response){  // AJAX
-	//alert(response);              // uncomment for debugging
-	// to make the objects draggable
-	var responseArr=response.split(" ");
-	for (i=0;i<responseArr.length;i++){
-		document.getElementById(responseArr[i]).className="DragObject";
-		document.getElementById(responseArr[i]).setAttribute("draggable", "true");
-		document.getElementById(responseArr[i]).setAttribute("ondragstart","drag(event)");
-	}
-});
+	$.post("prereq.php",sendData,function(response){  // AJAX for prereq
+		// alert(response);              // uncomment for debugging
+		// to make the objects draggable (for prereq)
+		var responseArr=response.split(" ");
+		for (i=0;i<responseArr.length;i++){
+			document.getElementById(responseArr[i]).className="DragObject";
+			document.getElementById(responseArr[i]).setAttribute("draggable", "true");
+			document.getElementById(responseArr[i]).setAttribute("ondragstart","drag(event)");
+		}
+	});
+	
+	$.post("preclusion.php",sendData,function(response){  // AJAX for preclusion
+		// alert(response);              // uncomment for debugging
+		// to make the objects blue (for preclusion)
+		var responseArr2=response.split(" ");
+		for (i=0;i<responseArr2.length;i++){
+			document.getElementById(responseArr2[i]).className="preclusionObject";
+			document.getElementById(responseArr2[i]).setAttribute("draggable", "false");
+		}
+	});
 }
+
 
 // main
 var main=function(){

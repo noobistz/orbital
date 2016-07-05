@@ -3,6 +3,7 @@
 	include_once("db.php");
 	$pid = $_GET['pid'];
 	$PRMods=array(); // to store mods with pre-requisites
+	$PCMods=array(); // to store mods with preclusions
 ?>
 
 <html>
@@ -18,7 +19,7 @@
 			<li><span onclick="instructions()">Instructions</span></li>
 		<ul>
 	</nav>
-	<br/>
+	
 	<!--Instructions carousel-->
 	<div id="instruction" class="overlay">
 		
@@ -29,6 +30,7 @@
 			  <li data-target="#instructionsCarousel" data-slide-to="1"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="2"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="3"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="4"></li>
 			</ol>
 
 			<!--Slides-->
@@ -38,7 +40,9 @@
 				<div class="carousel-caption">
 					<img src="images/1.png">
 					<h3>Begin by Selecting Your Course</h3>
-					<p>After selecting your course through the button shown above, your course's modules will be loaded.</p>
+					<p>
+					After selecting your course through the button shown above, your course's modules will be loaded in the right table.
+					</p>
 				</div>
 			  </div>
 
@@ -47,7 +51,13 @@
 				<div class="carousel-caption">
 					<img src="images/2.png">
 					<h3>Select any Category on the Right Table to View Your Modules</h3>
-					<p>Modules in green will be draggable and are allowed to be scheduled in the left table.</p>
+					<p>
+					Modules in green will be draggable and are allowed to be scheduled in the left table. 
+					<br/>
+					We assume that you have cleared the relevant `A` level qualifications and number of MCs required to take the module.
+					<br/>
+					Please edit your planner accordingly if you have not met these assumptions.
+					</p>
 				 </div>
 			  </div>
 			
@@ -56,7 +66,11 @@
 				<div class="carousel-caption">
 					<img src="images/3.png">
 					<h3>Modules in Red Are Not Allowed to Be Scheduled</h3>
-					<p>Modules will be red if their pre-requisites have not been met. Thus, they will not be allowed to be scheduled in the left table.</p>
+					<p>
+					Modules will be red if their pre-requisites have not been met.
+					<br/>
+					Thus, they will not be allowed to be scheduled in the left table.
+					</p>
 				 </div>
 			  </div>
 
@@ -65,9 +79,23 @@
 				<div class="carousel-caption">
 					<img src="images/4.png">
 					<h3>Modules in Red Will Turn Green Once Their Pre-Requisites Have Been Met</h3>
-					<p>After scheduling their pre-requisites in the left table, modules with their pre-requisites met will turn green and be allowed to be scheduled in the left table</p>
+					<p>
+					After scheduling their pre-requisites in the left table, modules with their pre-requisites met will turn green and be allowed to be scheduled in the left table.
+					</p>
 				 </div>
 			  </div>
+			  
+			  	<div class="item">
+				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/5.png">
+					<h3>Modules Will Turn Blue If Any of Their Preclusions Have Been Scheduled</h3>
+					<p>
+					These modules will not be allowed to be scheduled in the left table.
+					</p>
+				 </div>
+			  </div>
+			  
 			</div>
 
 			<!-- Left and right controls -->
@@ -257,7 +285,7 @@
 	  </section>
 	</div>
 
-	<div class="col-sm-9">
+	<div class="col-sm-9" style="position:fixed">
 		<table border=3 height="900px" width="100%" >
 			<tr class="mainTimetable1">
 				<th colspan="2">&nbsp;</th>
@@ -347,7 +375,7 @@
 		</table>
 	</div>
 
-	<div class="col-sm-3">
+	<div class="col-sm-3" style="float:right">
 		<table border=3  width="100%">
 			<tr class="modsTableHeader">
 				<td>
@@ -415,6 +443,10 @@
 								if (count($prereqArr)==0){ // if no real pre-req, make it the draggable class
 									$draggable=true;
 								}
+							}
+							
+							if ($preclu!=null){
+								$PCMods[$code]=$preclu;
 							}
 
 							// output the draggable object class
@@ -549,6 +581,10 @@
 								}
 							}
 
+							if ($preclu!=null){
+								$PCMods[$code]=$preclu;
+							}
+
 							// output the draggable object class
 							if ($draggable==true){
 								if ($prereq != null & $preclu != null & $coreq != null) {
@@ -617,7 +653,8 @@
 						}
 								echo $mods;
 					}
-					$_SESSION['PRMods'] = $PRMods; // to pass the $PRMods array to process.php
+					$_SESSION['PRMods'] = $PRMods; // to pass the $PRMods array to prereq.php
+					$_SESSION['PCMods'] = $PCMods;// to pass the $PCMods array to preclusion.php
 				?>
 				</td>
 			</tr>
