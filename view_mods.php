@@ -36,7 +36,7 @@
 			<!--Slides-->
 			<div class="carousel-inner" role="listbox">
 			  <div class="item active">
-				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/1.png">
 					<h3>Begin by Selecting Your Course</h3>
@@ -47,7 +47,7 @@
 			  </div>
 
 			  <div class="item">
-			  	<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+			  	<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/2.png">
 					<h3>Select any Category on the Right Table to View Your Modules</h3>
@@ -62,7 +62,7 @@
 			  </div>
 			
 			  <div class="item">
-				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/3.png">
 					<h3>Modules in Red Are Not Allowed to Be Scheduled</h3>
@@ -75,7 +75,7 @@
 			  </div>
 
 			  <div class="item">
-				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/4.png">
 					<h3>Modules in Red Will Turn Green Once Their Pre-Requisites Have Been Met</h3>
@@ -86,7 +86,7 @@
 			  </div>
 			  
 			  	<div class="item">
-				<img src="images/background.png" style="width:50%;height:80%;opacity:0">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/5.png">
 					<h3>Modules Will Turn Blue If Any of Their Preclusions Have Been Scheduled</h3>
