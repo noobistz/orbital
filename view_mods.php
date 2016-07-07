@@ -4,6 +4,7 @@
 	$pid = $_GET['pid'];
 	$PRMods=array(); // to store mods with pre-requisites
 	$PCMods=array(); // to store mods with preclusions
+	$CRMods=array(); // to store mods with co-requisites
 ?>
 
 <html>
@@ -31,6 +32,7 @@
 			  <li data-target="#instructionsCarousel" data-slide-to="2"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="3"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="4"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="5"></li>
 			</ol>
 
 			<!--Slides-->
@@ -92,6 +94,17 @@
 					<h3>Modules Will Turn Blue If Any of Their Preclusions Have Been Scheduled</h3>
 					<p>
 					These modules will not be allowed to be scheduled in the left table.
+					</p>
+				 </div>
+			  </div>
+			  
+			  <div class="item">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/6.png">
+					<h3>A Reminder Alert Will Show When You Schedule a Module with a Corequisite.</h3>
+					<p>
+					You will need to take the corequisite(s) in the same semester as the module you have just scheduled.
 					</p>
 				 </div>
 			  </div>
@@ -445,8 +458,14 @@
 								}
 							}
 							
+							// for preclusions
 							if ($preclu!=null){
 								$PCMods[$code]=$preclu;
+							}
+							
+							//for corequisites
+							if ($coreq!=null){
+								$CRMods[$code]=$coreq;
 							}
 
 							// output the draggable object class
@@ -581,8 +600,14 @@
 								}
 							}
 
+							// for preclusions
 							if ($preclu!=null){
 								$PCMods[$code]=$preclu;
+							}
+							
+							//for corequisites
+							if ($coreq!=null){
+								$CRMods[$code]=$coreq;
 							}
 
 							// output the draggable object class
@@ -655,6 +680,7 @@
 					}
 					$_SESSION['PRMods'] = $PRMods; // to pass the $PRMods array to prereq.php
 					$_SESSION['PCMods'] = $PCMods;// to pass the $PCMods array to preclusion.php
+					$_SESSION['CRMods'] = $CRMods;// to pass the $CRMods array to coreq.php
 				?>
 				</td>
 			</tr>

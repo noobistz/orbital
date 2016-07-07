@@ -121,6 +121,10 @@ function drop(ev) {
 			document.getElementById(responseArr2[i]).setAttribute("draggable", "false");
 		}
 	});
+	
+	$.post("coreq.php",sendData,function(response){  // AJAX for corequisite
+	alert("Reminder: You will need to take "+response+" in the same semester as this module("+data+").")
+	});
 }
 
 

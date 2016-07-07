@@ -28,6 +28,7 @@
 			  <li data-target="#instructionsCarousel" data-slide-to="2"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="3"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="4"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="5"></li>
 			</ol>
 
 			<!--Slides-->
@@ -89,6 +90,17 @@
 					<h3>Modules Will Turn Blue If Any of Their Preclusions Have Been Scheduled</h3>
 					<p>
 					These modules will not be allowed to be scheduled in the left table.
+					</p>
+				 </div>
+			  </div>
+			  
+			  <div class="item">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/6.png">
+					<h3>A Reminder Alert Will Show When You Schedule a Module with a Corequisite.</h3>
+					<p>
+					You will need to take the corequisite(s) in the same semester as the module you have just scheduled.
 					</p>
 				 </div>
 			  </div>
