@@ -102,9 +102,9 @@
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/6.png">
-					<h3>A Reminder Alert Will Show When You Schedule a Module with a Corequisite.</h3>
+					<h3>A Reminder Alert Will Show When You Schedule a Module with Co-requisite(s)</h3>
 					<p>
-					You will need to take the corequisite(s) in the same semester as the module you have just scheduled.
+					You will need to take the co-requisite(s) in the same semester as the module you have just scheduled.
 					</p>
 				 </div>
 			  </div>
