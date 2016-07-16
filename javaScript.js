@@ -86,6 +86,11 @@ function closeInstruction(){
 	document.getElementById("instruction").style.height = "0%";
 }
 
+// Reset
+function reset(){
+	alert("Are you sure? All data will be lost!");
+	window.location.href="reset.php";
+}
 
 // drag and drop stuff
 function allowDrop(ev) {
@@ -111,7 +116,7 @@ function drop(ev) {
 			document.getElementById(responseArr[i]).setAttribute("ondragstart","drag(event)");
 		}
 	});
-	
+
 	$.post("preclusion.php",sendData,function(response){  // AJAX for preclusion
 		// alert(response);              // uncomment for debugging
 		// to make the objects blue (for preclusion)
@@ -121,7 +126,7 @@ function drop(ev) {
 			document.getElementById(responseArr2[i]).setAttribute("draggable", "false");
 		}
 	});
-	
+
 	$.post("coreq.php",sendData,function(response){  // AJAX for corequisite
 	if (response!=""){
 		alert("Reminder: You will need to take "+response+" in the same semester as this module("+data+").")
@@ -132,7 +137,7 @@ function drop(ev) {
 
 // main
 var main=function(){
-	
+
 	$(".modulesToClear").click(function() {
 		$(".modulesToClear").removeClass("current");
 		$(".mods").hide();
@@ -143,7 +148,7 @@ var main=function(){
 	$(".modsTableHeader").click(function(){
 		$(".modulesToClear").removeClass("current");
 		$(".mods").hide();
-	});		
+	});
 	$(".overlay a").click(function(){
 		loadDoc("test.txt")
 		closeNav2();

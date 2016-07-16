@@ -19,7 +19,7 @@
 	<br/>
 	<!--Instructions carousel-->
 	<div id="instruction" class="overlay">
-		
+
 		<div id="instructionsCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<!--Carousel indicators-->
 			<ol class="carousel-indicators">
@@ -50,7 +50,7 @@
 					<img src="images/2.png">
 					<h3>Select any Category on the Right Table to View Your Modules</h3>
 					<p>
-					Modules in green will be draggable and are allowed to be scheduled in the left table. 
+					Modules in green will be draggable and are allowed to be scheduled in the left table.
 					<br/>
 					We assume that you have cleared the relevant `A` level qualifications and number of MCs required to take the module.
 					<br/>
@@ -58,7 +58,7 @@
 					</p>
 				 </div>
 			  </div>
-			
+
 			  <div class="item">
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
@@ -82,8 +82,8 @@
 					</p>
 				 </div>
 			  </div>
-			  
-			  	<div class="item">
+
+			  <div class="item">
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/5.png">
@@ -93,7 +93,7 @@
 					</p>
 				 </div>
 			  </div>
-			  
+
 			  <div class="item">
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
@@ -104,7 +104,7 @@
 					</p>
 				 </div>
 			  </div>
-			  
+
 			</div>
 
 			<!-- Left and right controls -->
@@ -117,7 +117,7 @@
 		  </div>
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeInstruction()">x</a>
 	</div>
-	
+
 	<div id="faculties" class="overlay">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">x</a>
 	  <section class="selectCourse1">
