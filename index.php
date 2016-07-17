@@ -161,7 +161,7 @@
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">x</a>
 		  <section class="overlay-content">
 				<?php
-					$sql_all_soc = "SELECT * FROM courses WHERE (id='1' or id='2' or id='3' or id='4' or id='5') ORDER BY id ASC";
+					$sql_all_soc = "SELECT * FROM courses WHERE faculty='soc' ORDER BY id ASC";
 					$res = mysqli_query($db, $sql_all_soc) or die(mysql_error());
 
 					$courses = "";
