@@ -168,7 +168,7 @@
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">x</a>
 		  <section class="overlay-content">
 				<?php
-					$sql_all_soc = "SELECT * FROM courses WHERE (id='1' or id='2' or id='3' or id='4' or id='5') ORDER BY id ASC";
+					$sql_all_soc = "SELECT * FROM courses WHERE faculty='soc' ORDER BY id ASC";
 					$res = mysqli_query($db, $sql_all_soc) or die(mysql_error());
 
 					$courses = "";
@@ -413,12 +413,56 @@
 					} else if ($pid == 3) {
 							$sql_mods = "SELECT *
 													 FROM modules
-													 WHERE course LIKE '%CS%' and type='C'";
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(AT)%') and type='C'";
 					} else if ($pid == 4) {
 							$sql_mods = "SELECT *
 													 FROM modules
-													 WHERE course LIKE '%ISEC%' and type='C'";
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(AI)%') and type='C'";
 					} else if ($pid == 5) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(CGG)%') and type='C'";
+					} else if ($pid == 6) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(CS)%') and type='C'";
+					} else if ($pid == 7) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(DS)%') and type='C'";
+					} else if ($pid == 8) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(MIR)%') and type='C'";
+					} else if ($pid == 9) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(IM)%') and type='C'";
+					} else if ($pid == 10) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(NDS)%') and type='C'";
+					} else if ($pid == 11) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(PC)%') and type='C'";
+					} else if ($pid == 12) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(PL)%') and type='C'";
+					} else if ($pid == 13) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(SE)%') and type='C'";
+					} else if ($pid == 14) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(VC)%') and type='C'";
+					} else if ($pid == 15) {
+							$sql_mods = "SELECT *
+													 FROM modules
+													 WHERE course LIKE '%ISEC%' and type='C'";
+					} else if ($pid == 16) {
 							$sql_mods = "SELECT *
 													 FROM modules
 													 WHERE course LIKE '%ISYS%' and type='C'";
@@ -548,24 +592,68 @@
 				<?php
 					if ($pid == 1) {
 							$sql_mods = "SELECT *
-													 FROM modules
-													 WHERE course LIKE '%BZA%' and type='PE'";
+												 	FROM modules
+												 	WHERE course LIKE '%BZA%' and type='PE'";
 					} else if ($pid == 2) {
 							$sql_mods = "SELECT *
-													 FROM modules
-													 WHERE course LIKE '%CEG%' and type='PE'";
+												 	FROM modules
+												 	WHERE course LIKE '%CEG%' and type='PE'";
 					} else if ($pid == 3) {
 							$sql_mods = "SELECT *
-													 FROM modules
-													 WHERE course LIKE '%CS%' and type='PE'";
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(AT)%') and type='PE'";
 					} else if ($pid == 4) {
 							$sql_mods = "SELECT *
-													 FROM modules
-													 WHERE course LIKE '%ISEC%' and type='PE'";
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(AI)%') and type='PE'";
 					} else if ($pid == 5) {
 							$sql_mods = "SELECT *
-													 FROM modules
-													 WHERE course LIKE '%ISYS%' and type='PE'";
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(CGG)%') and type='PE'";
+					} else if ($pid == 6) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(CS)%') and type='PE'";
+					} else if ($pid == 7) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(DS)%') and type='PE'";
+					} else if ($pid == 8) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(MIR)%') and type='PE'";
+					} else if ($pid == 9) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(IM)%') and type='PE'";
+					} else if ($pid == 10) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(NDS)%') and type='PE'";
+					} else if ($pid == 11) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(PC)%') and type='PE'";
+					} else if ($pid == 12) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(PL)%') and type='PE'";
+					} else if ($pid == 13) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(SE)%') and type='PE'";
+					} else if ($pid == 14) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE (course LIKE '%CS(ALL)%' or course LIKE '%CS(VC)%') and type='PE'";
+					} else if ($pid == 15) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE course LIKE '%ISEC%' and type='PE'";
+					} else if ($pid == 16) {
+							$sql_mods = "SELECT *
+												 	FROM modules
+												 	WHERE course LIKE '%ISYS%' and type='PE'";
 					}
 					$res = mysqli_query($db, $sql_mods) or die(mysql_error());
 
@@ -691,11 +779,20 @@
 				<td>
 				<h1 style="text-align: center">Unrestricted Electives</h1>
 				<?php
-					if (isset($pid)) {
+					if ($pid == 6) {
 							$sql_mods = "SELECT *
-													 FROM modules
-													 WHERE type='UEM'";
+													FROM modules
+													WHERE (code='UE 1' or code='UE 2') or (course='CS(CS)' and type='UEM')";
+					} else if ($pid == 13) {
+							$sql_mods = "SELECT *
+													FROM modules
+													WHERE (code='UE 1' or code='UE 2' or code='UE 3') or (course='CS(SE)' and type='UEM')";
+					} else {
+							$sql_mods = "SELECT *
+													FROM modules
+													WHERE (title='Unrestricted Electives')";
 					}
+
 					$res = mysqli_query($db, $sql_mods) or die(mysql_error());
 
 					$mods = "";
@@ -726,7 +823,7 @@
 					if (isset($pid)) {
 							$sql_mods = "SELECT *
 													 FROM modules
-													 WHERE type='GEM'";
+													 WHERE title='General Education Module'";
 					}
 					$res = mysqli_query($db, $sql_mods) or die(mysql_error());
 
