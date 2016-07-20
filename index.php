@@ -17,6 +17,7 @@
 		<ul>
 	</nav>
 	<br/>
+	<br/>
 	<!--Instructions carousel-->
 	<div id="instruction" class="overlay">
 

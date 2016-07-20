@@ -88,8 +88,11 @@ function closeInstruction(){
 
 // Reset
 function reset(){
-	alert("Are you sure? All data will be lost!");
-	window.location.href="reset.php";
+	if (confirm("Are you sure? All your data will be lost.")){
+		window.location.href="reset.php";
+	}
+	else{
+	}
 }
 
 // drag and drop stuff
@@ -106,6 +109,7 @@ function drop(ev) {
 	var data = ev.dataTransfer.getData("text");
 	ev.target.appendChild(document.getElementById(data));
 	var sendData="data="+data; // pre-processing for sending AJAX data
+	
 	$.post("prereq.php",sendData,function(response){  // AJAX for prereq
 		// alert(response);              // uncomment for debugging
 		// to make the objects draggable (for prereq)
@@ -131,6 +135,16 @@ function drop(ev) {
 	if (response!=""){
 		alert("Reminder: You will need to take "+response+" in the same semester as this module("+data+").")
 	}
+	});
+	
+	$.post("counter.php",sendData,function(response){  // AJAX for counter
+		var curr=document.getElementById("counter").innerHTML;
+		var sum=parseInt(curr)+parseInt(response);
+		document.getElementById("counter").innerHTML=sum;
+		if (sum>=160){
+			document.getElementById("counter").className="satisfiedCounter"; // change the colour to green once the user plans 160MCs (conventional MCs needed to gradute)
+		}
+		
 	});
 }
 

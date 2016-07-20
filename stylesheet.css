@@ -7,6 +7,13 @@ body {
 table{
 	table-layout:fixed;
 }
+.unsatisfiedCounter{
+	color:#ff0000;
+	font-weight:bold;
+}
+.satisfiedCounter{
+	color:#33cc33;
+}
 .mainTimetable1{
 	background-color:#FFF;
 }
@@ -52,7 +59,7 @@ table{
 	color: #fff;
 	border: solid 2px #cccccc;
 	cursor:move;
-  padding: 20px;
+	padding: 20px;
 }
 .noDragObject{
 	background-color: #ff0000;
@@ -64,7 +71,7 @@ table{
 	color: #fff;
 	border: solid 2px #cccccc;
 	cursor:move;
-  padding: 20px;
+	padding: 20px;
 }
 .preclusionObject{
 	background-color: #6600ff;
@@ -76,11 +83,14 @@ table{
 	color: #fff;
 	border: solid 2px #cccccc;
 	cursor:move;
-  padding: 20px;
+	padding: 20px;
 }
 
 nav {
   background-color: #333333;
+  position:fixed;
+  width:100%;
+  z-index:1;
 }
 
 nav li {

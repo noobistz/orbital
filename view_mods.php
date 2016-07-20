@@ -5,6 +5,7 @@
 	$PRMods=array(); // to store mods with pre-requisites
 	$PCMods=array(); // to store mods with preclusions
 	$CRMods=array(); // to store mods with co-requisites
+	$cred=array(); // to store the credits of each mod
 ?>
 
 <html>
@@ -19,11 +20,13 @@
 			<li><span onclick="openNav1()"><b>Select Your Course</b></span></li>
 			<li><span onclick="instructions()">Instructions</span></li>
 			<?php
+				echo "<li><span style='cursor:default'>Number of <i>MC</i>s scheduled: </span><span id='counter' style='cursor:default' class='unsatisfiedCounter'>0</span></li>";
 				echo "<li><span onclick='reset()'>Reset</span></li>";
 			?>
 		<ul>
 	</nav>
-
+	<br/>
+	<br/>
 	<!--Instructions carousel-->
 	<div id="instruction" class="overlay">
 
@@ -510,11 +513,14 @@
 								$PCMods[$code]=$preclu;
 							}
 
-							//for corequisites
+							// for corequisites
 							if ($coreq!=null){
 								$CRMods[$code]=$coreq;
 							}
-
+							
+							// for counter
+							$cred[$code]=$credit;
+							
 							// output the draggable object class
 							if ($draggable==true){
 								if ($prereq != null & $preclu != null & $coreq != null) {
@@ -696,10 +702,13 @@
 								$PCMods[$code]=$preclu;
 							}
 
-							//for corequisites
+							// for corequisites
 							if ($coreq!=null){
 								$CRMods[$code]=$coreq;
 							}
+							
+							// for counter
+							$cred[$code]=$credit;
 
 							// output the draggable object class
 							if ($draggable==true){
@@ -769,9 +778,6 @@
 						}
 								echo $mods;
 					}
-					$_SESSION['PRMods'] = $PRMods; // to pass the $PRMods array to prereq.php
-					$_SESSION['PCMods'] = $PCMods;// to pass the $PCMods array to preclusion.php
-					$_SESSION['CRMods'] = $CRMods;// to pass the $CRMods array to coreq.php
 				?>
 				</td>
 			</tr>
@@ -806,6 +812,9 @@
 							$preclu = $row['preclusion'];
 							$coreq = $row['corequisite'];
 							$sem = $row['semAvailability'];
+							
+							// for counter
+							$cred[$code]=$credit;
 
 							$mods .="<div class='mods'>
 													<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit &#xa;Semester: $sem' data-tooltip-position='bottom'>$code</span>
@@ -838,6 +847,9 @@
 							$preclu = $row['preclusion'];
 							$coreq = $row['corequisite'];
 							$sem = $row['semAvailability'];
+							
+							// for counter
+							$cred[$code]=$credit;
 
 							$mods .="<div class='mods'>
 													<span id='$code' class='dragObject' draggable='true' ondragstart='drag(event)' data-tooltip='Module Credit: $credit &#xa;Semester: $sem' data-tooltip-position='bottom'>$code</span>
@@ -845,6 +857,10 @@
 						}
 							echo $mods;
 					}
+					$_SESSION['PRMods'] = $PRMods; // to pass the $PRMods array to prereq.php
+					$_SESSION['PCMods'] = $PCMods;// to pass the $PCMods array to preclusion.php
+					$_SESSION['CRMods'] = $CRMods;// to pass the $CRMods array to coreq.php
+					$_SESSION['cred'] = $cred;// to pass the $cred array to counter.php
 				?>
 				</td>
 			</tr>
