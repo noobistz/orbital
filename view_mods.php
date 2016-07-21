@@ -14,14 +14,15 @@
 	<link rel="stylesheet" href="stylesheet.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
-<body>
+<body onload='load()'>
 	<nav>
 		<ul>
-			<li><span onclick="openNav1()"><b>Select Your Course</b></span></li>
-			<li><span onclick="instructions()">Instructions</span></li>
 			<?php
+				echo "<li><span onclick='openNav1()''><b>Select Your Course</b></span></li>";
+				echo "<li><span onclick='instructions()''>Instructions</span></li>";
 				echo "<li><span style='cursor:default'>Number of <i>MC</i>s scheduled: </span><span id='counter' style='cursor:default' class='unsatisfiedCounter'>0</span></li>";
 				echo "<li><span onclick='reset()'>Reset</span></li>";
+				echo "<li><span onclick='save()'>Save</span></li>"
 			?>
 		<ul>
 	</nav>
@@ -319,77 +320,77 @@
 				<th rowspan="2" style="text-align:center;background-color: white">Year 1</th>
 				<th style="text-align:center">Semester 1</th>
 				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S12" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S13" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S14" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S15" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S16" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S21" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S22" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S23" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S24" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S25" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y1S26" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 2</th>
 				<th style="text-align:center">Semester 1</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S12" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S13" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S14" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S15" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S16" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S21" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S22" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S23" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S24" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S25" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y2S26" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 3</th>
 				<th style="text-align:center">Semester 1</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S12" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S13" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S14" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S15" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S16" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S21" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S22" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S23" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S24" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S25" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y3S26" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable2">
 				<th rowspan="2" style="text-align:center;background-color: white">Year 4</th>
 				<th style="text-align:center">Semester 1</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S12" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S13" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S14" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S15" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S16" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 			<tr class="mainTimetable1">
 				<th style="text-align:center">Semester 2</th>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
-				<td id="Y1S11" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S21" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S22" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S23" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S24" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S25" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
+				<td id="Y4S26" ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align:center"></td>
 			</tr>
 		</table>
 	</div>
@@ -517,10 +518,10 @@
 							if ($coreq!=null){
 								$CRMods[$code]=$coreq;
 							}
-							
+
 							// for counter
 							$cred[$code]=$credit;
-							
+
 							// output the draggable object class
 							if ($draggable==true){
 								if ($prereq != null & $preclu != null & $coreq != null) {
@@ -706,7 +707,7 @@
 							if ($coreq!=null){
 								$CRMods[$code]=$coreq;
 							}
-							
+
 							// for counter
 							$cred[$code]=$credit;
 
@@ -812,7 +813,7 @@
 							$preclu = $row['preclusion'];
 							$coreq = $row['corequisite'];
 							$sem = $row['semAvailability'];
-							
+
 							// for counter
 							$cred[$code]=$credit;
 
@@ -847,7 +848,7 @@
 							$preclu = $row['preclusion'];
 							$coreq = $row['corequisite'];
 							$sem = $row['semAvailability'];
-							
+
 							// for counter
 							$cred[$code]=$credit;
 
