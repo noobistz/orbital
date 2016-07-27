@@ -30,6 +30,8 @@
 			  <li data-target="#instructionsCarousel" data-slide-to="3"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="4"></li>
 			  <li data-target="#instructionsCarousel" data-slide-to="5"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="6"></li>
+			  <li data-target="#instructionsCarousel" data-slide-to="7"></li>
 			</ol>
 
 			<!--Slides-->
@@ -38,7 +40,7 @@
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/1.png">
-					<h3>Begin by Selecting Your Course</h3>
+					<h3>Begin by selecting your course</h3>
 					<p>
 					After selecting your course through the button shown above, your course's modules will be loaded in the right table.
 					</p>
@@ -49,7 +51,7 @@
 			  	<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/2.png">
-					<h3>Select any Category on the Right Table to View Your Modules</h3>
+					<h3>Select any category on the right table to view your modules</h3>
 					<p>
 					Modules in green will be draggable and are allowed to be scheduled in the left table.
 					<br/>
@@ -64,7 +66,7 @@
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/3.png">
-					<h3>Modules in Red Are Not Allowed to Be Scheduled</h3>
+					<h3>Modules in red are not allowed to be scheduled</h3>
 					<p>
 					Modules will be red if their pre-requisites have not been met.
 					<br/>
@@ -77,20 +79,20 @@
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/4.png">
-					<h3>Modules in Red Will Turn Green Once Their Pre-Requisites Have Been Met</h3>
+					<h3>Modules in red will turn green once their pre-requisites have been met</h3>
 					<p>
 					After scheduling their pre-requisites in the left table, modules with their pre-requisites met will turn green and be allowed to be scheduled in the left table.
 					</p>
 				 </div>
 			  </div>
 
-			  <div class="item">
+			  	<div class="item">
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/5.png">
-					<h3>Modules Will Turn Blue If Any of Their Preclusions Have Been Scheduled</h3>
+					<h3>Modules will turn blue if any of their preclusions have been scheduled</h3>
 					<p>
-					These modules will not be allowed to be scheduled in the left table.
+					These modules will then not be allowed to be scheduled in the left table.
 					</p>
 				 </div>
 			  </div>
@@ -99,9 +101,31 @@
 				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
 				<div class="carousel-caption">
 					<img src="images/6.png">
-					<h3>A Reminder Alert Will Show When You Schedule a Module with Co-requisite(s)</h3>
+					<h3>A reminder alert will show when you schedule a module with co-requisite(s)</h3>
 					<p>
 					You will need to take the co-requisite(s) in the same semester as the module you have just scheduled.
+					</p>
+				 </div>
+			  </div>
+			  
+			  <div class="item">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/7.png">
+					<h3>There will be an MCs counter on the top bar which automatically updates whenever you schedule a module</h3>
+					<p>
+					This counts the number of MCs you have scheduled and the number will turn green once you have scheduled 160 MCs.
+					</p>
+				 </div>
+			  </div>
+			  
+			  <div class="item">
+				<img src="images/background.png" style="width:50%;height:60%;opacity:0">
+				<div class="carousel-caption">
+					<img src="images/8.png">
+					<h3>You may reset or save your timetable through the buttons that will be available on the top bar</h3>
+					<p>
+					If you wish to redo your timetable or save your schedule for future reference, you may do so through these buttons.
 					</p>
 				 </div>
 			  </div>

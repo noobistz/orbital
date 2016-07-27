@@ -86,16 +86,6 @@ function closeInstruction(){
 	document.getElementById("instruction").style.height = "0%";
 }
 
-// Reset
-function reset(){
-	if (confirm("Are you sure? All your data will be lost. You will need to re-select your major.")){
-		localStorage.clear();
-		window.location.href="reset.php";
-	}
-	else{
-	}
-}
-
 // drag and drop stuff
 function allowDrop(ev) {
 	ev.preventDefault();
@@ -149,20 +139,150 @@ function drop(ev) {
 	});
 }
 
-// incomplete - test
-// save
+// cookies
 function save() {
-	localStorage.setItem("Y1S11", document.getElementbyId("Y1S11").innerHTML);
+	var cookiesCount = document.cookie.split(';');
+	if(cookiesCount.length>1){ // if there was a previous saved state (cookies not empty)
+		if (confirm("Confirm save? Your previous saved record will be overwritten.")){
+			var cookies = document.cookie.split(";");  // clear the initial cookie first
+			for (var i = 0; i < cookies.length; i++) {
+				var cookie = cookies[i];
+				var pos = cookie.indexOf("=");
+				var name = pos > -1 ? cookie.substr(0, pos) : cookie;
+				document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT"; // code from http://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript
+			}
+			
+			for (var i=1;i<=4;i++){ // year
+				for (var j=1;j<=2;j++){ // semester
+					for (var k=1;k<=6;k++){ // slot
+						var code="Y"+i.toString()+"S"+j.toString()+k.toString();
+						if(document.getElementById(code).innerHTML!=""){
+							document.cookie=code+"="+document.getElementById(code).getElementsByTagName('span')[0].innerHTML+";expires=4*365*24*60*60*"; // expires after 4 years
+						}
+					}
+				}
+			}
+			alert("Saved!");
+			location.reload();
+		}
+		else{
+		}
+	}
+	else {
+		var cookies = document.cookie.split(";");  // clear the initial cookie first
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = cookies[i];
+			var pos = cookie.indexOf("=");
+			var name = pos > -1 ? cookie.substr(0, pos) : cookie;
+			document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT"; // code from http://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript
+		}
+			
+		for (var i=1;i<=4;i++){ // year
+			for (var j=1;j<=2;j++){ // semester
+				for (var k=1;k<=6;k++){ // slot
+					var code="Y"+i.toString()+"S"+j.toString()+k.toString();
+					if(document.getElementById(code).innerHTML!=""){
+						document.cookie=code+"="+document.getElementById(code).getElementsByTagName('span')[0].innerHTML+";expires=4*365*24*60*60*"; // expires after 4 years
+					}
+				}
+			}
+		}
+		alert("Saved!");
+		location.reload();
+	}
 }
 
-// load
-function load() {
-	document.getElementbyId("Y1S11").innerHTML = localStorage.getItem("Y1S11");
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(){
+	var cookies = document.cookie
+	if (cookies!=""){
+		for (var i=1;i<=4;i++){ // year
+			for (var j=1;j<=2;j++){ // semester
+				for (var k=1;k<=6;k++){ // slot
+					var code="Y"+i.toString()+"S"+j.toString()+k.toString();
+					if (getCookie(code)!=""){
+						// make the saved elements draggable first
+						document.getElementById(getCookie(code)).className="DragObject";
+						document.getElementById(getCookie(code)).setAttribute("draggable", "true");
+						document.getElementById(getCookie(code)).setAttribute("ondragstart","drag(event)");
+						
+						// mimic drag & drop event
+						document.getElementById(code).appendChild(document.getElementById(getCookie(code)));
+						var data=getCookie(code);
+						var sendData="data="+data; 
+
+						$.post("prereq.php",sendData,function(response){  
+							var responseArr=response.split(" ");
+							for (i=0;i<responseArr.length;i++){
+								document.getElementById(responseArr[i]).className="DragObject";
+								document.getElementById(responseArr[i]).setAttribute("draggable", "true");
+								document.getElementById(responseArr[i]).setAttribute("ondragstart","drag(event)");
+							}
+						});
+
+						$.post("preclusion.php",sendData,function(response){ 
+							var responseArr2=response.split(" ");
+							for (i=0;i<responseArr2.length;i++){
+								document.getElementById(responseArr2[i]).className="preclusionObject";
+								document.getElementById(responseArr2[i]).setAttribute("draggable", "false");
+							}
+						});
+
+						$.post("coreq.php",sendData,function(response){  
+						if (response!=""){
+							alert("Reminder: You will need to take "+response+" in the same semester as this module("+data+").")
+						}
+						});
+
+						$.post("counter.php",sendData,function(response){  
+							var curr=document.getElementById("counter").innerHTML;
+							var sum=parseInt(curr)+parseInt(response);
+							document.getElementById("counter").innerHTML=sum;
+							if (sum>=160){
+								document.getElementById("counter").className="satisfiedCounter";
+							}
+
+						});
+
+					}
+				}
+			}
+		}
+	}
+}
+
+	
+function reset(){
+	if (confirm("Are you sure? Your entire schedule will be erased.")){
+		var cookies = document.cookie.split(";");
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = cookies[i];
+			var pos = cookie.indexOf("=");
+			var name = pos > -1 ? cookie.substr(0, pos) : cookie;
+			document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT"; // code from http://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript
+			location.reload();
+		}
+	}
+	else{
+	}
 }
 
 // main
 var main=function(){
-
 	$(".modulesToClear").click(function() {
 		$(".modulesToClear").removeClass("current");
 		$(".mods").hide();
@@ -190,5 +310,6 @@ var main=function(){
 		closeNav13();
 		closeNav1();
 	});
+	checkCookie(); // to check for cookies when the page loads
 }
 $(document).ready(main);

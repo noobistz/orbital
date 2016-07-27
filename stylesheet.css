@@ -7,16 +7,20 @@ body {
 table{
 	table-layout:fixed;
 }
+
 .unsatisfiedCounter{
 	color:#ff0000;
 	font-weight:bold;
 }
+
 .satisfiedCounter{
 	color:#33cc33;
 }
+
 .mainTimetable1{
 	background-color:#FFF;
 }
+
 .mainTimetable2{
 	background-color: #e6e6e6;
 }
@@ -31,20 +35,24 @@ table{
     text-align: center;
     margin-top: 30px;
 }
+
 .modulesToClear{
 	background-color: #333333;
 	color:#FFF;
 	cursor: pointer;
 }
+
 .modsTableHeader{
 	background-color: #333333;
 	color:#FFF;
 	cursor: pointer;
 }
+
 .mods{
 	display:none;
 	text-align:center;
 }
+
 .current{
 	background-color:#000000;
 }
@@ -61,6 +69,7 @@ table{
 	cursor:move;
 	padding: 20px;
 }
+
 .noDragObject{
 	background-color: #ff0000;
 	border-style: solid;
@@ -73,6 +82,7 @@ table{
 	cursor:move;
 	padding: 20px;
 }
+
 .preclusionObject{
 	background-color: #6600ff;
 	border-style: solid;
@@ -101,6 +111,7 @@ nav li {
   padding: 20px;
   cursor: pointer;
 }
+
 footer{
 	background-color: #333333;
 	position: fixed;
@@ -124,6 +135,7 @@ footer{
     overflow-y: hidden;
     transition: 0.5s;
 }
+
 .overlay-content {
     top: 10%;
     width: 100%;
@@ -167,6 +179,7 @@ footer{
     cursor: move;
     padding: 20px;
 }
+
 /* Tooltip styling */
 [data-tooltip]:before {
     content: attr(data-tooltip);
